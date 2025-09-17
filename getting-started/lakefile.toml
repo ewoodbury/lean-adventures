@@ -1,0 +1,10 @@
+name = "getting-started"
+version = "0.1.0"
+defaultTargets = ["getting-started"]
+
+[[lean_lib]]
+name = "GettingStarted"
+
+[[lean_exe]]
+name = "getting-started"
+root = "Main"
