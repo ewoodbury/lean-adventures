@@ -1,14 +1,8 @@
--- No imports needed - we'll use basic Lean 4 tactics
-
--- We define what it means for an integer 'n' to be even.
--- It's a proposition ('Prop') that says there exists ('∃') an integer 'k'
--- such that n = 2 * k.
 def is_even (n : Int) : Prop := ∃ k : Int, n = 2 * k
 
 theorem even_plus_even (a b : Int) (ha : is_even a) (hb : is_even b) : is_even (a + b) := by
-  -- First, let's see what our hypotheses ha and hb actually mean.
-  -- We'll "rewrite" them using the definition of is_even.
-  -- The `*` means "do this everywhere you can" (at ha, hb, and the goal).
+  -- Rewrite ha and hb using the definition of is_even
+  -- use * to define showing this for ha, hb, and goal
   rw [is_even] at *
 
   -- From our hypothesis 'ha : ∃ k, a = 2 * k', we can obtain such a 'k'.
