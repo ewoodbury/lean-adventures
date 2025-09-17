@@ -1,7 +1,7 @@
-name = "getting-start-mathlib"
+name = "lean-adventures"
 version = "0.1.0"
 keywords = ["math"]
-defaultTargets = ["GettingStartMathlib"]
+defaultTargets = ["LeanAdventures"]
 
 [leanOptions]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
@@ -15,4 +15,4 @@ name = "mathlib"
 scope = "leanprover-community"
 
 [[lean_lib]]
-name = "GettingStartMathlib"
+name = "LeanAdventures"
