@@ -1,5 +1,7 @@
-def is_even (n : Int) : Prop := ∃ k : Int, n = 2 * k
+-- Chapter 1: Basic Number Theory - Even Numbers
+import LeanAdventures.Common.Definitions
 
+-- Theorem: The sum of two even numbers is even
 theorem even_plus_even (a b : Int) (ha : is_even a) (hb : is_even b) : is_even (a + b) := by
   -- Rewrite ha and hb using the definition of is_even
   -- use * to define showing this for ha, hb, and goal
@@ -24,3 +26,10 @@ theorem even_plus_even (a b : Int) (ha : is_even a) (hb : is_even b) : is_even (
     -- This follows from the distributive property: 2 * (k₁ + k₂) = 2 * k₁ + 2 * k₂
     simp [Int.mul_add]
   ⟩
+
+-- Additional theorems you might want to prove:
+-- theorem even_times_any (a b : Int) (ha : is_even a) : is_even (a * b) := by
+--   sorry
+
+-- theorem even_square (a : Int) (ha : is_even a) : is_even (a * a) := by
+--   sorry
